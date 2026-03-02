@@ -1,6 +1,6 @@
 Hi,
 
-The tricky part of hosting a bidirectional predictive fermentation model is the I/O contract between the Python backend and the web layer — built a working version of that interface: {VERCEL_URL}
+The tricky part of hosting a bidirectional predictive fermentation model is the I/O contract between the Python backend and the web layer — built a working version of that interface: https://palaka-fermentation.vercel.app
 
 Covers model input submission, prediction output display, auth, and data upload — the four pieces you described. FastAPI is already the assumed backend pattern.
 
