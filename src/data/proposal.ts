@@ -2,26 +2,29 @@ import type { Profile, PortfolioProject } from "@/lib/types";
 
 export const profile: Profile = {
   name: "Humam",
-  tagline: "Full-stack developer specializing in Next.js applications",
-  bio: "I build MVPs and production apps that solve real operational problems — CRM systems, fleet management platforms, AI-powered dashboards, and e-commerce tools. My approach is straightforward: understand the business need, build something that works, and ship it fast.",
+  tagline:
+    "Full-stack developer who ships MVPs fast — from concept to deployed product in days, not months.",
+  bio: "I build practical tools that work — dashboards, data pipelines, auth systems, and API integrations. I've already built a working demo of your fermentation prediction interface in Tab 1. The production version starts from there.",
   approach: [
     {
-      title: "Understand the Problem",
-      description: "Read the full requirements, identify the core pain point",
-    },
-    {
-      title: "Build a Working Demo",
+      title: "Understand the Model",
       description:
-        "Show, don't tell — a live demo is worth 1000 words of proposal text",
+        "Map the fermentation model's inputs and outputs first — what parameters go in, what predictions come out, and what the API contract looks like. One focused conversation covers everything.",
     },
     {
-      title: "Use Realistic Data",
+      title: "Build the Core Loop",
       description:
-        "Mock data that looks like real client data, not placeholder text",
+        "Working model interface from day one. You'll see real progress every few days — no dark periods, no waiting two weeks for a status update.",
     },
     {
-      title: "Ship Fast",
-      description: "MVP first, polish later. Get something deployed quickly",
+      title: "Ship the MVP",
+      description:
+        "Production-ready on Vercel with clean TypeScript, file upload handling, auth, and a documented structure you can hand off or extend as you add genomic and microbiome data.",
+    },
+    {
+      title: "Iterate Together",
+      description:
+        "Short feedback cycles as the platform grows. New data types, new prediction endpoints, new user roles — scoped and shipped in focused sprints.",
     },
   ],
   skillCategories: [
@@ -30,29 +33,36 @@ export const profile: Profile = {
       skills: [
         "TypeScript",
         "React",
-        "Next.js",
+        "Next.js (App Router)",
         "Tailwind CSS",
         "shadcn/ui",
         "Recharts",
       ],
     },
     {
-      name: "Backend & APIs",
+      name: "Backend Integration",
       skills: [
-        "Node.js",
-        "REST APIs",
-        "Microsoft Graph",
-        "Stripe",
-        "Shopify API",
+        "Python/FastAPI integration",
+        "REST API design",
+        "File upload handling",
+        "Webhook patterns",
       ],
     },
     {
-      name: "AI & Automation",
+      name: "Data & Auth",
       skills: [
-        "Claude API",
-        "OpenAI API",
-        "n8n",
-        "Prompt Engineering",
+        "Structured data processing",
+        "CSV/JSON parsing",
+        "Email auth",
+        "Role-based access",
+      ],
+    },
+    {
+      name: "DevOps",
+      skills: [
+        "Vercel deployment",
+        "GitHub Actions",
+        "TypeScript strict mode",
       ],
     },
   ],
@@ -60,24 +70,50 @@ export const profile: Profile = {
 
 export const portfolioProjects: PortfolioProject[] = [
   {
+    id: "medrecord-ai",
+    title: "MedRecord AI",
+    description:
+      "AI-powered medical record summarization tool that extracts key clinical data, diagnoses, medications, and treatment timelines from unstructured patient records.",
+    outcome:
+      "Document processing pipeline that extracts structured clinical data and generates a readable timeline summary",
+    tech: ["Next.js", "TypeScript", "shadcn/ui", "AI extraction pipeline"],
+    relevance:
+      "Closest match to scientific data handling — structured extraction from complex domain inputs mirrors what your fermentation model interface needs.",
+    liveUrl: "https://medrecord-ai-delta.vercel.app",
+  },
+  {
+    id: "data-intelligence",
+    title: "Data Intelligence Platform",
+    description:
+      "Data analytics and intelligence dashboard with multi-source data aggregation, interactive visualizations, and filterable insight generation.",
+    outcome:
+      "Unified analytics dashboard pulling data from multiple sources with interactive charts and filterable insights",
+    tech: ["Next.js", "TypeScript", "shadcn/ui", "Recharts"],
+    relevance:
+      "Multi-source data pattern matches your roadmap — you're expanding to genomic, microbiome, and chemical panel data, all needing unified visualization.",
+    liveUrl: "https://data-intelligence-platform-sandy.vercel.app",
+  },
+  {
     id: "wmf-agent",
     title: "WMF Agent Dashboard",
     description:
-      "AI-powered customer service agent for manufacturing — email classification, RFQ extraction, human-in-the-loop approval",
-    tech: ["Next.js", "Claude API", "n8n", "Microsoft Graph"],
-  },
-  {
-    id: "lead-crm",
-    title: "Lead Intake CRM",
-    description:
-      "Lead intake form, CRM dashboard, lead scoring, pipeline management, and automation rules",
-    tech: ["Next.js", "TypeScript", "Tailwind", "shadcn/ui"],
+      "AI-powered customer service agent with email classification, structured RFQ data extraction, confidence scoring, and human-in-the-loop approval workflow.",
+    outcome:
+      "Replaced a 4-hour manual quote review process with a 20-minute structured extraction and approval flow",
+    tech: ["Next.js", "TypeScript", "Claude API", "n8n", "Microsoft Graph"],
+    relevance:
+      "Shows AI + structured data extraction working in production for a real client — same pattern as your prediction input/output interface.",
+    liveUrl: "https://wmf-agent-dashboard.vercel.app",
   },
   {
     id: "fleet-saas",
     title: "Fleet Maintenance SaaS",
     description:
-      "Asset tracking, work orders, preventive maintenance, inspections, parts inventory, analytics",
-    tech: ["Next.js", "Recharts", "TypeScript", "shadcn/ui"],
+      "Multi-module SaaS platform covering asset tracking, work orders, preventive maintenance scheduling, inspections, parts inventory, and analytics.",
+    outcome:
+      "6-module SaaS covering the full maintenance lifecycle — from asset registry to work orders to parts inventory",
+    tech: ["Next.js", "TypeScript", "shadcn/ui", "Recharts"],
+    relevance:
+      "Demonstrates building a platform that grows — multiple modules, complex data relationships, designed for expansion. That's your roadmap.",
   },
 ];

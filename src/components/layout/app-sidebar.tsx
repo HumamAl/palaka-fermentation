@@ -7,6 +7,10 @@ import { cn } from "@/lib/utils";
 import { APP_CONFIG } from "@/lib/config";
 import {
   LayoutDashboard,
+  FlaskConical,
+  Database,
+  Upload,
+  MessageSquare,
   ChevronLeft,
   ChevronRight,
   Lightbulb,
@@ -23,9 +27,11 @@ import {
 // ═══════════════════════════════════════════════════════════════════════════
 
 const navItems = [
-  { href: "/", label: "Dashboard", icon: LayoutDashboard },
-  // Dashboard Builder agent: add 3-5 feature page nav items here.
-  // Example: { href: "/orders", label: "Orders", icon: ShoppingCart },
+  { href: "/", label: "Fermentation Overview", icon: LayoutDashboard },
+  { href: "/predictions", label: "Model Predictions", icon: FlaskConical },
+  { href: "/batches", label: "Batch Monitor", icon: Database },
+  { href: "/uploads", label: "Data Uploads", icon: Upload },
+  { href: "/feedback", label: "Feedback", icon: MessageSquare },
 ];
 
 function SidebarLogo({ collapsed }: { collapsed: boolean }) {

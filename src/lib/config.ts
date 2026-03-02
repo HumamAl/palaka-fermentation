@@ -42,36 +42,13 @@ export type DeviceModel =
   | "safari-browser"
   ;
 
-// Quick routing reference (full table in references/design-diversity.md):
-//
-//   finance / fintech    → linear | dark-premium | corporate-enterprise
-//   health B2B           → corporate-enterprise | linear
-//   health consumer      → nature-wellness | warm-organic
-//   SaaS / dev tools     → linear | dark-premium
-//   AI / ML              → dark-premium | linear
-//   e-commerce / retail  → e-commerce | saas-modern
-//   logistics            → corporate-enterprise | data-dense
-//   education K-12       → warm-organic | saas-modern
-//   education B2B        → saas-modern | linear
-//   real estate          → linear | corporate-enterprise
-//   marketplace          → saas-modern | e-commerce
-//   food / restaurant    → warm-organic | nature-wellness
-//   creative agency      → bold-editorial | swiss-typographic
-//   gaming               → dark-premium | retrofuturism
-//   legal / compliance   → corporate-enterprise | linear
-//   cybersecurity        → dark-premium | corporate-enterprise
-//   DevOps / monitoring  → data-dense | dark-premium
-//   HR tech              → saas-modern | warm-organic
-//   sustainability       → nature-wellness | warm-organic
-//   web3 / crypto        → dark-premium | retrofuturism
-
 export const APP_CONFIG = {
-  appName: "App Name",                       // Display name (sidebar header, page title)
-  projectName: "Project Name",               // Client's product name (tab bar microtext, footer)
-  clientName: null as string | null,         // Client first name, or null — never render "null"
-  domain: "tech",                            // Domain (finance, health, marketplace, tech, etc.)
-  aesthetic: "linear" as AestheticProfile,   // Drives data-theme="..." on <html>
-  demoFormat: "dashboard-app" as DemoFormat,          // Layout architecture for Tab 1
-  deviceModel: undefined as DeviceModel | undefined,  // Device frame model (frame formats only)
-  screenCount: undefined as number | undefined,       // Number of screens in frame demos
+  appName: "Palaka Model Hub",
+  projectName: "Palaka Fermentation",
+  clientName: null as string | null,
+  domain: "biotech",
+  aesthetic: "linear" as AestheticProfile,
+  demoFormat: "dashboard-app" as DemoFormat,
+  deviceModel: undefined as DeviceModel | undefined,
+  screenCount: undefined as number | undefined,
 } as const;
